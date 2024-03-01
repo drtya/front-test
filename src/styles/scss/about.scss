@@ -1,0 +1,130 @@
+.about {
+  margin-bottom: clamp(40px, 5vw, 95px);
+  &_promo {
+    width: 100%;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+  &_textbox {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(20deg) translateX(-50%);
+    width: 100%;
+    background: #fcfdff;
+    z-index: 1;
+  }
+  &_imagebox {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    background: url("../assets/image/about/image.png") center/cover no-repeat;
+  }
+  &_text {
+    padding: 0 5% 0 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    &_title{
+      margin-bottom: 25px;
+    }
+    &_btn {
+      display: none;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: #231f20;
+      border: 1px solid #d2ab66;
+      border-radius: 4px;
+      margin-top: 5px;
+      margin-left: auto;
+      background: none;
+    }
+    &_description {
+      font-size: 20px;
+    }
+  }
+}
+
+.advantages_bg {
+  background-color: #fcfdff;
+  .advantages {
+    padding: 10px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    &_item {
+      margin-top: 20px;
+      width: 33%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 5px;
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .about {
+    &_textbox {
+      transform: skewX(20deg) translateX(-40%);
+    }
+    &_text {
+      width: 60%;
+      &_description {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media (max-width: 993px) {
+  .about {
+    &_promo {
+      height: 550px;
+    }
+    &_textbox {
+      transform: skewX(20deg) translateX(-30%);
+    }
+    &_text {
+      width: 70%;
+      &_description {
+        font-size: 16px;
+      }
+    }
+  }
+  .advantages_bg {
+    .advantages {
+      &_item {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    &_promo {
+      height: 400px;
+    }
+    &_text {
+      &_description {
+        font-size: 14px;
+        &_hide {
+          display: none;
+        }
+      }
+      &_btn {
+        display: block;
+      }
+    }
+  }
+}

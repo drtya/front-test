@@ -1,0 +1,118 @@
+.footer {
+  overflow: hidden;
+  position: relative;
+  padding: 65px 0 53px;
+  background: #231f20;
+  &_constructor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 15px;
+    color: #f5f5f5;
+    font-size: 12px;
+    flex-grow: 1;
+    width: 20%;
+  }
+  &_nav {
+    width: 35%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    & > a {
+      font-size: 16px;
+      transition: 0.5s;
+      color: #f5f5f5;
+      position: relative;
+      &::before {
+        transition: 0.5s;
+        content: "";
+        bottom: -2px;
+        position: absolute;
+        background: #d2ab66;
+        height: 2px;
+        width: 0;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &_contacts {
+    width: 45%;
+    &_title {
+      font-size: 24px;
+      color: #f5f5f5;
+    }
+    &_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &_item {
+        & > img {
+          width: 26px;
+          height: 26px;
+          object-fit: cover;
+        }
+        display: flex;
+        gap: 5px;
+        color: #f5f5f5;
+      }
+    }
+  }
+  &_license {
+    color: #f5f5f5;
+    font-size: 12px;
+    position: absolute;
+    bottom: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding: 22px 0 110px;
+    &_logo {
+      opacity: 0.4;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      width: unset;
+      .footer_logo_text {
+        display: none;
+      }
+    }
+    &_license {
+      display: block;
+    }
+    &_nav {
+      display: none;
+    }
+    &_contacts {
+      &_grid {
+        display: flex;
+        flex-direction: column;
+        &_item {
+          & > img {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+          }
+          font-size: 14px;
+        }
+      }
+      &_title {
+        font-size: 20px;
+      }
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.map {
+  padding: 50px 0;
+  margin-bottom: clamp(40px,5vw,95px);
+  &_title {
+    margin-bottom: clamp(14px,3vw,40px);
+  }
+  #map{
+    height: clamp(160px,45vw,460px) !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width:860px) {
+    .map{
+        padding: 0;
+    }
+}

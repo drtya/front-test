@@ -1,0 +1,83 @@
+.services {
+    background: #FCFDFF;
+    padding: 50px 0 80px;
+    margin-bottom: clamp(40px,5vw,95px);
+  &_title {
+    margin-bottom: clamp(25px, 3vw, 40px);
+  }
+  &_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  &_card {
+    border-radius: 6px;
+    padding: 40px 32px 30px;
+    &:nth-child(1) {
+      background: url("../assets/image/services/grindertool.png") center/cover
+        no-repeat;
+    }
+    &:nth-child(2) {
+      background: url("../assets/image/services/carving.png") center/cover
+        no-repeat;
+    }
+    &:nth-child(3) {
+      background: url("../assets/image/services/fittings.png") center/cover
+        no-repeat;
+    }
+    &:nth-child(4) {
+      background: url("../assets/image/services/track.png") center/cover
+        no-repeat;
+    }
+
+    &.background-tint {
+      background-color: rgba(47, 47, 47, 0.3);
+      background-blend-mode: multiply;
+    }
+    &_title {
+      font-size: clamp(16px, 3vw, 30px);
+      color: #f5f5f5;
+      margin-bottom: 10px;
+    }
+    &_description {
+      font-size: clamp(10px, 3vw, 19px);
+      color: #f5f5f5;
+      margin-bottom: 20px;
+    }
+    &_btn {
+      margin-left: auto;
+      border-radius: 5px;
+      font-size: clamp(12px, 3vw, 15px);
+      color: #231f20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 8px 14px;
+      background: #f5f5f5;
+    }
+  }
+}
+
+@media (max-width: 1208px) {
+  .services {
+    background: none;
+    padding: 0;
+    &_grid {
+      grid-template-columns: 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+    &_card {
+      padding: 22px 17px 15px;
+      &_arrow {
+        width: 12px;
+      }
+      &_btn {
+        padding: 4px 8px;
+      }
+    }
+    
+  }
+}

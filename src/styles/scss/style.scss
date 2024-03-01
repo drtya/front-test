@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+button {
+  outline: none;
+  border: none;
+}
+main {
+  background: #eeeff2;
+}
+.section_title {
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: bold;
+  color: #231f20;
+}
+
+@import "promo.scss";
+@import "products.scss";
+@import "about.scss";
+@import "services.scss";
+@import "sponsors.scss";
+@import "feedback.scss";
+@import "map.scss";
+@import "footer.scss";

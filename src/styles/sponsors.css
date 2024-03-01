@@ -1,0 +1,37 @@
+.sponsors {
+  margin-bottom: clamp(50px, 5vw, 95px);
+  background: #fcfdff;
+  padding: 50px 0 70px;
+}
+.sponsors_title {
+  margin-bottom: 30px;
+}
+.sponsors_description {
+  width: 30%;
+  font-size: 20px;
+  color: #444444;
+}
+.sponsors_about {
+  display: flex;
+}
+.sponsors_grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.sponsors #sponsors_slide {
+  display: none;
+}
+
+@media (max-width: 1208px) {
+  .sponsors {
+    background: none;
+    padding: 0;
+  }
+  .sponsors_about {
+    display: none;
+  }
+  .sponsors #sponsors_slide {
+    display: block;
+  }
+}/*# sourceMappingURL=sponsors.css.map */
